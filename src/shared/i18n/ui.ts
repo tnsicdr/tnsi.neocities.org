@@ -6,6 +6,6 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
-    siteTitle: `tensei's corner`,
+    siteTitle: `tnsiWEB`,
   },
 };
