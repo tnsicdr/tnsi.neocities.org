@@ -1,6 +1,6 @@
 ---
+import Header from "../components/astro/Header/Header.astro";
 import Base from "../layouts/Base.astro";
-import NavBar from "../components/astro/NavBar/NavBar.astro";
 import { getLangFromUri, useTranslation } from "../shared/i18n/utils";
 
 const lang = getLangFromUri(Astro.url);
@@ -8,6 +8,5 @@ const t = useTranslation(lang);
 ---
 
 <Base title="Home">
-  <h1>{t("siteTitle")}</h1>
-  <NavBar lang={lang} />
+  <Header />
 </Base>

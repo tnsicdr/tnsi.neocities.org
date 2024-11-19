@@ -7,11 +7,10 @@ import preact from "@astrojs/preact";
 export default defineConfig({
   site: "https://tnsi.neocities.org",
   output: "static",
-
+  prefetch: true,
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   integrations: [preact({ compat: true })],
 });

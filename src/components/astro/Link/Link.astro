@@ -1,0 +1,10 @@
+---
+interface Props {
+  className?: string;
+  path: string;
+}
+
+const { className, path } = Astro.props;
+---
+
+<a class={className} href={path} data-astro-prefetch><slot /></a>

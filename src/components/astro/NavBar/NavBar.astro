@@ -1,6 +1,7 @@
 ---
 import { getLangFromUri, useTranslation } from "../../../shared/i18n/utils";
 import { MainNavLinks } from "../../../shared/nav/navLinks";
+import Link from "../Link/Link.astro";
 
 const lang = getLangFromUri(Astro.url);
 const t = useTranslation(lang);
@@ -11,7 +12,7 @@ const t = useTranslation(lang);
     {
       MainNavLinks.map((link) => (
         <li>
-          <a href={link.path}>{t(link.labelKey)}</a>
+          <Link path={link.path}>{t(link.labelKey)}</Link>
         </li>
       ))
     }

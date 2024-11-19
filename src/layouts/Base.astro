@@ -18,6 +18,21 @@ const t = useTranslation(lang);
     <title>{t("siteTitle")}{title ? ` - ${title}` : null}</title>
   </head>
   <body>
-    <slot />
+    <div class="container">
+      <slot />
+    </div>
   </body>
 </html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 768px;
+  }
+</style>

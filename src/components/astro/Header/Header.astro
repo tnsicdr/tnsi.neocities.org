@@ -1,0 +1,25 @@
+---
+import { getLangFromUri, useTranslation } from "../../../shared/i18n/utils";
+import NavBar from "../NavBar/NavBar.astro";
+
+const lang = getLangFromUri(Astro.url);
+const t = useTranslation(lang);
+---
+
+<header class="site-header">
+  <h1 class="site-title">{t("siteTitle")}</h1>
+  <NavBar />
+</header>
+<style>
+  .site-header {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .site-title {
+    margin: 0;
+  }
+</style>
