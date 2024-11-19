@@ -1,0 +1,28 @@
+---
+import { getLangFromUri, useTranslation } from "../../../shared/i18n/utils";
+import { MainNavLinks } from "../../../shared/nav/navLinks";
+
+const lang = getLangFromUri(Astro.url);
+const t = useTranslation(lang);
+---
+
+<nav>
+  <ul class="navlist">
+    {
+      MainNavLinks.map((link) => (
+        <li>
+          <a href={link.path}>{t(link.labelKey)}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .navlist {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+  }
+</style>
