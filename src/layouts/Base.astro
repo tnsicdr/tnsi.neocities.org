@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/astro/Footer/Footer.astro";
+import Header from "../components/astro/Header/Header.astro";
 import { getLangFromUri, useTranslation } from "../shared/i18n/utils";
 interface Props {
   title?: string;
@@ -19,7 +21,11 @@ const t = useTranslation(lang);
   </head>
   <body>
     <div class="container">
-      <slot />
+      <Header />
+      <main>
+        <slot />
+      </main>
+      <Footer />
     </div>
   </body>
 </html>
@@ -27,12 +33,17 @@ const t = useTranslation(lang);
 <style>
   html,
   body {
+    height: 100vh;
+    height; 100dvh;
     margin: 0;
     width: 100%;
   }
 
   .container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     margin: 0 auto;
     max-width: 768px;
+    min-height: 100%;
   }
 </style>

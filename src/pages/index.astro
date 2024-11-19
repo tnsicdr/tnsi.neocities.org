@@ -1,5 +1,4 @@
 ---
-import Header from "../components/astro/Header/Header.astro";
 import Base from "../layouts/Base.astro";
 import { getLangFromUri, useTranslation } from "../shared/i18n/utils";
 
@@ -7,6 +6,4 @@ const lang = getLangFromUri(Astro.url);
 const t = useTranslation(lang);
 ---
 
-<Base title="Home">
-  <Header />
-</Base>
+<Base title="Home"> home </Base>

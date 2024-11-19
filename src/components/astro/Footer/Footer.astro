@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import { getLangFromUri, useTranslation } from "../../../shared/i18n/utils";
+import neocitiesBadge from "./images/neocities.png";
+import Link from "../Link/Link.astro";
+
+const lang = getLangFromUri(Astro.url);
+const t = useTranslation(lang);
+
+const currYear = new Date().getFullYear().toString();
+const initialYear = "2024";
+const isSameAsInitialYear = currYear === initialYear;
+---
+
+<footer class="site-footer">
+  <span
+    >{isSameAsInitialYear ? initialYear : `${initialYear} - ${currYear}`} &copy;
+    {t("siteTitle")}</span
+  >
+  <Link path="https://neocities.org"
+    ><Image src={neocitiesBadge} alt={t("footer.neocities")} /></Link
+  >
+</footer>
+<style>
+  .site-footer {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+  }
+</style>
