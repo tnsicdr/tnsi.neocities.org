@@ -1,0 +1,13 @@
+---
+import { NavBar } from "../../components/preact/NavBar";
+import Base from "../../layouts/Base.astro";
+import { getLangFromUri, useTranslation } from "../../shared/i18n/utils";
+
+const lang = getLangFromUri(Astro.url);
+const t = useTranslation(lang);
+---
+
+<Base title="Home">
+  <h1>{t("siteTitle")}</h1>
+  <NavBar lang={lang} />
+</Base>
