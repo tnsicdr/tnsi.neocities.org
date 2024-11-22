@@ -18,6 +18,7 @@ export function getLangFromUri(url: URL) {
  */
 export function useTranslation(lang: keyof typeof ui) {
   return function t(key: keyof (typeof ui)[typeof defaultLang]) {
+    // @ts-expect-error -- Other languages can be missing strings defined in default
     return ui[lang][key] || ui[defaultLang][key];
   };
 }

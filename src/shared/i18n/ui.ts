@@ -11,4 +11,8 @@ export const ui = {
     "nav.about": `About`,
     "nav.home": `Home`,
   },
+  ja: {
+    "nav.about": `について`,
+    "nav.home": `ホーム`,
+  },
 };

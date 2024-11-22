@@ -10,7 +10,10 @@ export default defineConfig({
   prefetch: true,
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "ja"],
+    routing: {
+      prefixDefaultLocale: false,
+    },
   },
   integrations: [preact({ compat: true })],
 });
