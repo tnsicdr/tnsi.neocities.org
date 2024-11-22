@@ -11,8 +11,12 @@ export default defineConfig({
   i18n: {
     defaultLocale: "en",
     locales: ["en", "ja"],
+    fallback: {
+      ja: "en",
+    },
     routing: {
-      prefixDefaultLocale: false,
+      prefixDefaultLocale: true,
+      fallbackType: "rewrite",
     },
   },
   integrations: [preact({ compat: true })],

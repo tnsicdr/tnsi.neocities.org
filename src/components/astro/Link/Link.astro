@@ -1,10 +1,20 @@
 ---
+import { getLangFromUri } from "../../../shared/i18n/utils";
+
 interface Props {
   className?: string;
   path: string;
 }
 
 const { className, path } = Astro.props;
+
+const lang = getLangFromUri(Astro.url);
+const isLocal = path.startsWith("/");
+
+let linkPath = path;
+if (isLocal) {
+  linkPath = `/${lang}${path}`;
+}
 ---
 
-<a class={className} href={path} data-astro-prefetch><slot /></a>
+<a class={className} href={linkPath} data-astro-prefetch><slot /></a>

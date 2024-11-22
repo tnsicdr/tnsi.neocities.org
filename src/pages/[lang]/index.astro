@@ -1,0 +1,20 @@
+---
+import Base from "../../layouts/Base.astro";
+import { languages } from "../../shared/i18n/ui";
+import { getLangFromUri, useTranslation } from "../../shared/i18n/utils";
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({
+    params: {
+      lang: lang,
+    },
+  }));
+}
+
+const lang = getLangFromUri(Astro.url);
+const t = useTranslation(lang);
+
+const url = Astro.url;
+const pageTitle = t("nav.home");
+---
+
+<Base title={pageTitle}>{url}</Base>
