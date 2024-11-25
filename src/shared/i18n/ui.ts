@@ -11,9 +11,11 @@ export const ui = {
     "footer.neocities": "Hosted by Neocities",
     "nav.about": `About`,
     "nav.home": `Home`,
+    "section.latestPosts": `Latest Posts`,
   },
   ja: {
     "nav.about": `について`,
     "nav.home": `ホーム`,
+    "section.latestPosts": `最新の投稿`,
   },
 };
