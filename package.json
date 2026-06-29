@@ -16,18 +16,18 @@
     "react-dom": "npm:@preact/compat@latest"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/preact": "^3.5.3",
-    "astro": "^4.16.13",
-    "preact": "^10.24.3",
-    "typescript": "^5.6.3"
+    "@astrojs/check": "^0.9.9",
+    "@astrojs/preact": "^6.0.0",
+    "astro": "^7.0.3",
+    "preact": "^10.29.3",
+    "typescript": "^6.0.3"
   },
   "devDependencies": {
-    "@divriots/jampack": "^0.30.0",
-    "postcss": "^8.4.49",
+    "@divriots/jampack": "^0.34.1",
+    "postcss": "^8.5.16",
     "postcss-flexbugs-fixes": "^5.0.2",
-    "postcss-import": "^16.1.0",
-    "postcss-nesting": "^13.0.1",
-    "postcss-preset-env": "^10.1.1"
+    "postcss-import": "^16.1.1",
+    "postcss-nesting": "^14.0.0",
+    "postcss-preset-env": "^11.3.2"
   }
 }
